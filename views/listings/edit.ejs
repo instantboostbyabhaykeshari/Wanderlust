@@ -1,0 +1,17 @@
+<% layout("./layouts/boilerplate.ejs") -%>
+<body>
+    <h3>Edit your list: </h3>
+    <form method="post" action="/listings/<%= editListing._id %>?_method=PUT">
+        <input name="title" value="<%= editListing.title %>" type="text">
+        <br><br>
+        <textarea name="description"><%= editListing.description %></textarea>
+        <br><br>
+        <input name="price" value="<%= editListing.price %>" type="number">
+        <br><br>
+        <input name="location" value="<%= editListing.location %>" type="text">
+        <br><br>
+        <input name="country" value="<%= editListing.country %>" type="text">
+        <br><br>
+        <button>Edit</button>
+    </form>
+</body>
